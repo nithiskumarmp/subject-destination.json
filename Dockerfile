@@ -14,6 +14,9 @@ RUN comfy node install --exit-on-fail comfyui-rmbg@3.0.0
 RUN comfy node install --exit-on-fail comfyui_layerstyle@2.0.38
 RUN comfy node install --exit-on-fail ComfyUI_AdvancedRefluxControl
 
+# Install Blender (Required for BlenderRenderNode)
+RUN apt-get update && apt-get install -y blender && rm -rf /var/lib/apt/lists/*
+
 # unknown-registry custom nodes: clone known GitHub repos directly into /comfyui/custom_nodes
 RUN git clone https://github.com/Aruntd008/comfyui_document_scanner /comfyui/custom_nodes/comfyui_document_scanner
 RUN git clone https://github.com/Aruntd008/ComfyUI_SeamlessPattern /comfyui/custom_nodes/ComfyUI_SeamlessPattern

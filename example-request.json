@@ -1,0 +1,1450 @@
+{
+  "input": {
+    "workflow": {
+      "8": {
+        "inputs": {},
+        "class_type": "Reroute",
+        "_meta": {
+          "title": "Reroute"
+        }
+      },
+      "12": {
+        "inputs": {},
+        "class_type": "Reroute",
+        "_meta": {
+          "title": "Reroute"
+        }
+      },
+      "13": {
+        "inputs": {},
+        "class_type": "Reroute",
+        "_meta": {
+          "title": "Reroute"
+        }
+      },
+      "14": {
+        "inputs": {},
+        "class_type": "Reroute",
+        "_meta": {
+          "title": "Reroute"
+        }
+      },
+      "17": {
+        "inputs": {},
+        "class_type": "Reroute",
+        "_meta": {
+          "title": "Reroute"
+        }
+      },
+      "18": {
+        "inputs": {
+          "image": "scene_destination.png"
+        },
+        "class_type": "LoadImage",
+        "_meta": {
+          "title": "Load destination (input)"
+        }
+      },
+      "19": {
+        "inputs": {
+          "value": 256,
+          "image": [
+            "100",
+            0
+          ],
+          "width": [
+            "101",
+            0
+          ],
+          "height": [
+            "101",
+            1
+          ]
+        },
+        "class_type": "ImageCrop+",
+        "_meta": {
+          "title": "ImageCrop+"
+        }
+      },
+      "22": {
+        "inputs": {
+          "image": [
+            "62",
+            0
+          ]
+        },
+        "class_type": "GetImageSize+",
+        "_meta": {
+          "title": "GetImageSize+"
+        }
+      },
+      "23": {
+        "inputs": {
+          "value": 512,
+          "panel_width": [
+            "22",
+            0
+          ],
+          "panel_height": [
+            "22",
+            1
+          ]
+        },
+        "class_type": "CR Color Panel",
+        "_meta": {
+          "title": "CR Color Panel"
+        }
+      },
+      "24": {
+        "inputs": {},
+        "class_type": "Reroute",
+        "_meta": {
+          "title": "Reroute"
+        }
+      },
+      "25": {
+        "inputs": {},
+        "class_type": "Reroute",
+        "_meta": {
+          "title": "Reroute"
+        }
+      },
+      "26": {
+        "inputs": {
+          "filename": "t5xxl_fp16.safetensors"
+        },
+        "class_type": "DualCLIPLoader",
+        "_meta": {
+          "title": "DualCLIPLoader"
+        }
+      },
+      "27": {
+        "inputs": {
+          "filename": "ultra-realistic, floor-length curtains hanging from a stainless-steel curtain rod mounted above the window.\nRender them with deep, pronounced, sharp triple-pinch pleats at the top, continuing into strong, well-defined vertical folds all the way down. Folds should have realistic depth, shadowing, and thickness, not flat or shallow.\n\nCurtain Requirements:\n\nUse thick, medium-weight fabric (not sheer) deep folds.\n\nEnsure natural drape, volume, and weight, with shadows falling consistently according to the room’s lighting.\n\nThe fabric texture must accurately wrap and deform across all pleats and folds — no stretching, overlapping, or blurring.\n\nInclude a slight opening in the center to reveal part of the window behind.\n\nThe stainless-steel curtain rod must remain fully visible above the pleats, without intersecting or blending into the fabric.\n\nRealism / Integration Requirements:\n\nMatch lighting, color temperature, reflections, and shadows precisely to the room environment.\n\nEnsure the curtains look seamlessly integrated, photorealistic, and high resolution.\n\nPreserve accurate perspective and material specularity according to the real scene.\n\nAvoid any artifacts: no texture tiling, no blurry edges, no geometry warping.\n\nFinal Output:\n\nProduce a high-resolution, photorealistic image with realistic fabric thickness, deep folds, sharp pleat structure, and correct lighting consistent with a real room."
+        },
+        "class_type": "Text Multiline",
+        "_meta": {
+          "title": "Prompt 1"
+        }
+      },
+      "29": {
+        "inputs": {
+          "text": ", ",
+          "text_a": [
+            "86",
+            0
+          ],
+          "text_b": [
+            "31",
+            0
+          ],
+          "text_c": [
+            "30",
+            0
+          ]
+        },
+        "class_type": "Text Concatenate",
+        "_meta": {
+          "title": "Text Concatenate"
+        }
+      },
+      "30": {
+        "inputs": {},
+        "class_type": "Reroute",
+        "_meta": {
+          "title": "Reroute"
+        }
+      },
+      "31": {
+        "inputs": {
+          "text": "None"
+        },
+        "class_type": "Prompt Multiple Styles Selector",
+        "_meta": {
+          "title": "Prompt Multiple Styles Selector"
+        }
+      },
+      "32": {
+        "inputs": {},
+        "class_type": "Reroute",
+        "_meta": {
+          "title": "Reroute"
+        }
+      },
+      "33": {
+        "inputs": {
+          "value": 30,
+          "conditioning": [
+            "55",
+            0
+          ]
+        },
+        "class_type": "FluxGuidance",
+        "_meta": {
+          "title": "FluxGuidance"
+        }
+      },
+      "34": {
+        "inputs": {
+          "model": [
+            "111",
+            0
+          ],
+          "conditioning": [
+            "33",
+            0
+          ]
+        },
+        "class_type": "BasicGuider",
+        "_meta": {
+          "title": "BasicGuider"
+        }
+      },
+      "35": {
+        "inputs": {},
+        "class_type": "Reroute",
+        "_meta": {
+          "title": "Reroute"
+        }
+      },
+      "36": {
+        "inputs": {},
+        "class_type": "Reroute",
+        "_meta": {
+          "title": "Reroute"
+        }
+      },
+      "40": {
+        "inputs": {
+          "text": "dpmpp_2m"
+        },
+        "class_type": "KSamplerSelect",
+        "_meta": {
+          "title": "KSamplerSelect"
+        }
+      },
+      "41": {
+        "inputs": {
+          "filename": "ae.safetensors"
+        },
+        "class_type": "VAELoader",
+        "_meta": {
+          "title": "VAELoader"
+        }
+      },
+      "42": {
+        "inputs": {
+          "filename": "sglip2-so400m-patch16-512.safetensors"
+        },
+        "class_type": "CLIPVisionLoader",
+        "_meta": {
+          "title": "CLIPVisionLoader"
+        }
+      },
+      "43": {
+        "inputs": {},
+        "class_type": "Reroute",
+        "_meta": {
+          "title": "Reroute"
+        }
+      },
+      "44": {
+        "inputs": {
+          "filename": "flux1-redux-dev.safetensors"
+        },
+        "class_type": "StyleModelLoader",
+        "_meta": {
+          "title": "StyleModelLoader"
+        }
+      },
+      "46": {
+        "inputs": {
+          "text": "right",
+          "image1": [
+            "23",
+            0
+          ],
+          "image2": [
+            "65",
+            0
+          ]
+        },
+        "class_type": "ImageConcanate",
+        "_meta": {
+          "title": "ImageConcanate"
+        }
+      },
+      "47": {
+        "inputs": {
+          "text": "red",
+          "image": [
+            "46",
+            0
+          ]
+        },
+        "class_type": "ImageToMask",
+        "_meta": {
+          "title": "ImageToMask"
+        }
+      },
+      "48": {
+        "inputs": {
+          "value": 8,
+          "mask": [
+            "47",
+            0
+          ]
+        },
+        "class_type": "GrowMaskWithBlur",
+        "_meta": {
+          "title": "GrowMaskWithBlur"
+        }
+      },
+      "50": {
+        "inputs": {
+          "images": [
+            "46",
+            0
+          ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+          "title": "PreviewImage"
+        }
+      },
+      "51": {
+        "inputs": {},
+        "class_type": "Reroute",
+        "_meta": {
+          "title": "Reroute"
+        }
+      },
+      "52": {
+        "inputs": {
+          "text": "right",
+          "image1": [
+            "61",
+            0
+          ],
+          "image2": [
+            "245",
+            0
+          ]
+        },
+        "class_type": "ImageConcanate",
+        "_meta": {
+          "title": "ImageConcanate"
+        }
+      },
+      "53": {
+        "inputs": {},
+        "class_type": "Reroute",
+        "_meta": {
+          "title": "Reroute"
+        }
+      },
+      "55": {
+        "inputs": {
+          "value": true,
+          "positive": [
+            "85",
+            0
+          ],
+          "negative": [
+            "85",
+            0
+          ],
+          "vae": [
+            "59",
+            0
+          ],
+          "pixels": [
+            "58",
+            0
+          ],
+          "mask": [
+            "32",
+            0
+          ]
+        },
+        "class_type": "InpaintModelConditioning",
+        "_meta": {
+          "title": "InpaintModelConditioning"
+        }
+      },
+      "56": {
+        "inputs": {},
+        "class_type": "Reroute",
+        "_meta": {
+          "title": "Reroute"
+        }
+      },
+      "58": {
+        "inputs": {},
+        "class_type": "Reroute",
+        "_meta": {
+          "title": "Reroute"
+        }
+      },
+      "59": {
+        "inputs": {},
+        "class_type": "Reroute",
+        "_meta": {
+          "title": "Reroute"
+        }
+      },
+      "60": {
+        "inputs": {},
+        "class_type": "Reroute",
+        "_meta": {
+          "title": "Reroute"
+        }
+      },
+      "61": {
+        "inputs": {
+          "value": 16384,
+          "image": [
+            "36",
+            0
+          ],
+          "height": [
+            "64",
+            1
+          ]
+        },
+        "class_type": "ImageResize+",
+        "_meta": {
+          "title": "ImageResize+"
+        }
+      },
+      "62": {
+        "inputs": {},
+        "class_type": "Reroute",
+        "_meta": {
+          "title": "Reroute"
+        }
+      },
+      "63": {
+        "inputs": {},
+        "class_type": "Reroute",
+        "_meta": {
+          "title": "Reroute"
+        }
+      },
+      "64": {
+        "inputs": {
+          "image": [
+            "245",
+            0
+          ]
+        },
+        "class_type": "GetImageSize+",
+        "_meta": {
+          "title": "GetImageSize+"
+        }
+      },
+      "65": {
+        "inputs": {
+          "mask": [
+            "68",
+            0
+          ]
+        },
+        "class_type": "MaskToImage",
+        "_meta": {
+          "title": "MaskToImage"
+        }
+      },
+      "66": {
+        "inputs": {},
+        "class_type": "Reroute",
+        "_meta": {
+          "title": "Reroute"
+        }
+      },
+      "67": {
+        "inputs": {},
+        "class_type": "Reroute",
+        "_meta": {
+          "title": "Reroute"
+        }
+      },
+      "68": {
+        "inputs": {},
+        "class_type": "Reroute",
+        "_meta": {
+          "title": "Reroute"
+        }
+      },
+      "70": {
+        "inputs": {
+          "conditioning_to": [
+            "89",
+            0
+          ],
+          "conditioning_from": [
+            "244",
+            0
+          ]
+        },
+        "class_type": "ConditioningConcat",
+        "_meta": {
+          "title": "ConditioningConcat"
+        }
+      },
+      "76": {
+        "inputs": {},
+        "class_type": "Reroute",
+        "_meta": {
+          "title": "Reroute"
+        }
+      },
+      "77": {
+        "inputs": {},
+        "class_type": "Reroute",
+        "_meta": {
+          "title": "Reroute"
+        }
+      },
+      "78": {
+        "inputs": {},
+        "class_type": "Reroute",
+        "_meta": {
+          "title": "Reroute"
+        }
+      },
+      "84": {
+        "inputs": {
+          "images": [
+            "52",
+            0
+          ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+          "title": "PreviewImage"
+        }
+      },
+      "85": {
+        "inputs": {},
+        "class_type": "Reroute",
+        "_meta": {
+          "title": "Reroute"
+        }
+      },
+      "86": {
+        "inputs": {
+          "text": ""
+        },
+        "class_type": "Text Multiline",
+        "_meta": {
+          "title": "Additional prompt"
+        }
+      },
+      "89": {
+        "inputs": {
+          "text": [
+            "29",
+            0
+          ],
+          "clip": [
+            "143",
+            0
+          ]
+        },
+        "class_type": "CLIPTextEncode",
+        "_meta": {
+          "title": "CLIPTextEncode"
+        }
+      },
+      "90": {
+        "inputs": {
+          "text": "none",
+          "clip_vision": [
+            "43",
+            0
+          ],
+          "image": [
+            "61",
+            0
+          ]
+        },
+        "class_type": "CLIPVisionEncode",
+        "_meta": {
+          "title": "CLIPVisionEncode"
+        }
+      },
+      "93": {
+        "inputs": {
+          "value": 1,
+          "model": [
+            "282",
+            0
+          ]
+        },
+        "class_type": "DifferentialDiffusion",
+        "_meta": {
+          "title": "DifferentialDiffusion"
+        }
+      },
+      "94": {
+        "inputs": {
+          "value": 1.15,
+          "model": [
+            "95",
+            0
+          ],
+          "width": [
+            "97",
+            0
+          ],
+          "height": [
+            "97",
+            1
+          ]
+        },
+        "class_type": "ModelSamplingFlux",
+        "_meta": {
+          "title": "ModelSamplingFlux"
+        }
+      },
+      "95": {
+        "inputs": {},
+        "class_type": "Reroute",
+        "_meta": {
+          "title": "Reroute"
+        }
+      },
+      "96": {
+        "inputs": {},
+        "class_type": "Reroute",
+        "_meta": {
+          "title": "Reroute"
+        }
+      },
+      "97": {
+        "inputs": {
+          "image": [
+            "58",
+            0
+          ]
+        },
+        "class_type": "GetImageSize+",
+        "_meta": {
+          "title": "GetImageSize+"
+        }
+      },
+      "98": {
+        "inputs": {},
+        "class_type": "Reroute",
+        "_meta": {
+          "title": "Reroute"
+        }
+      },
+      "99": {
+        "inputs": {
+          "value": 256,
+          "image": [
+            "106",
+            0
+          ],
+          "width": [
+            "101",
+            0
+          ],
+          "height": [
+            "101",
+            1
+          ]
+        },
+        "class_type": "ImageCrop+",
+        "_meta": {
+          "title": "ImageCrop+"
+        }
+      },
+      "100": {
+        "inputs": {
+          "mask": [
+            "104",
+            0
+          ]
+        },
+        "class_type": "MaskToImage",
+        "_meta": {
+          "title": "MaskToImage"
+        }
+      },
+      "101": {
+        "inputs": {
+          "image": [
+            "102",
+            0
+          ]
+        },
+        "class_type": "GetImageSize+",
+        "_meta": {
+          "title": "GetImageSize+"
+        }
+      },
+      "102": {
+        "inputs": {},
+        "class_type": "Reroute",
+        "_meta": {
+          "title": "Reroute"
+        }
+      },
+      "103": {
+        "inputs": {},
+        "class_type": "Reroute",
+        "_meta": {
+          "title": "Reroute"
+        }
+      },
+      "104": {
+        "inputs": {},
+        "class_type": "Reroute",
+        "_meta": {
+          "title": "Reroute"
+        }
+      },
+      "106": {
+        "inputs": {
+          "samples": [
+            "110",
+            0
+          ],
+          "vae": [
+            "150",
+            0
+          ]
+        },
+        "class_type": "VAEDecode",
+        "_meta": {
+          "title": "VAEDecode"
+        }
+      },
+      "107": {
+        "inputs": {
+          "text": "red",
+          "image": [
+            "19",
+            0
+          ]
+        },
+        "class_type": "ImageToMask",
+        "_meta": {
+          "title": "ImageToMask"
+        }
+      },
+      "109": {
+        "inputs": {
+          "value": [
+            {
+              "name": "A",
+              "selected": true,
+              "url": "/api/view?filename=rgthree.compare._temp_fyguq_00001_.png&type=temp&subfolder=&rand=0.810916343604549"
+            },
+            {
+              "name": "B",
+              "selected": true,
+              "url": "/api/view?filename=rgthree.compare._temp_fyguq_00002_.png&type=temp&subfolder=&rand=0.49010104224280415"
+            }
+          ],
+          "image_a": [
+            "120",
+            0
+          ],
+          "image_b": [
+            "76",
+            0
+          ]
+        },
+        "class_type": "Image Comparer (rgthree)",
+        "_meta": {
+          "title": "Image Comparer (rgthree)"
+        }
+      },
+      "110": {
+        "inputs": {
+          "noise": [
+            "116",
+            0
+          ],
+          "guider": [
+            "34",
+            0
+          ],
+          "sampler": [
+            "40",
+            0
+          ],
+          "sigmas": [
+            "129",
+            0
+          ],
+          "latent_image": [
+            "56",
+            0
+          ]
+        },
+        "class_type": "SamplerCustomAdvanced",
+        "_meta": {
+          "title": "SamplerCustomAdvanced"
+        }
+      },
+      "111": {
+        "inputs": {},
+        "class_type": "Reroute",
+        "_meta": {
+          "title": "Reroute"
+        }
+      },
+      "112": {
+        "inputs": {},
+        "class_type": "Fast Groups Bypasser (rgthree)",
+        "_meta": {
+          "title": "Controller"
+        }
+      },
+      "116": {
+        "inputs": {
+          "value": 57976759711776
+        },
+        "class_type": "RandomNoise",
+        "_meta": {
+          "title": "RandomNoise"
+        }
+      },
+      "120": {
+        "inputs": {
+          "value": 1,
+          "image": [
+            "281",
+            0
+          ]
+        },
+        "class_type": "LayerColor: BrightnessContrastV2",
+        "_meta": {
+          "title": "LayerColor: BrightnessContrastV2"
+        }
+      },
+      "122": {
+        "inputs": {},
+        "class_type": "Reroute",
+        "_meta": {
+          "title": "Reroute"
+        }
+      },
+      "123": {
+        "inputs": {
+          "value": 0,
+          "destination": [
+            "122",
+            0
+          ],
+          "source": [
+            "99",
+            0
+          ],
+          "mask": [
+            "124",
+            0
+          ]
+        },
+        "class_type": "ImageCompositeMasked",
+        "_meta": {
+          "title": "ImageCompositeMasked"
+        }
+      },
+      "124": {
+        "inputs": {},
+        "class_type": "Reroute",
+        "_meta": {
+          "title": "Reroute"
+        }
+      },
+      "128": {
+        "inputs": {},
+        "class_type": "Reroute",
+        "_meta": {
+          "title": "Reroute"
+        }
+      },
+      "129": {
+        "inputs": {
+          "text": "sgm_uniform",
+          "model": [
+            "98",
+            0
+          ]
+        },
+        "class_type": "BasicScheduler",
+        "_meta": {
+          "title": "BasicScheduler"
+        }
+      },
+      "143": {
+        "inputs": {},
+        "class_type": "Reroute",
+        "_meta": {
+          "title": "Reroute"
+        }
+      },
+      "147": {
+        "inputs": {},
+        "class_type": "Reroute",
+        "_meta": {
+          "title": "Reroute"
+        }
+      },
+      "148": {
+        "inputs": {},
+        "class_type": "Reroute",
+        "_meta": {
+          "title": "Reroute"
+        }
+      },
+      "150": {
+        "inputs": {},
+        "class_type": "Reroute",
+        "_meta": {
+          "title": "Reroute"
+        }
+      },
+      "152": {
+        "inputs": {},
+        "class_type": "Reroute",
+        "_meta": {
+          "title": "Reroute"
+        }
+      },
+      "244": {
+        "inputs": {
+          "text": "lowest",
+          "conditioning": [
+            "89",
+            0
+          ],
+          "style_model": [
+            "44",
+            0
+          ],
+          "clip_vision_output": [
+            "90",
+            0
+          ]
+        },
+        "class_type": "StyleModelApplySimple",
+        "_meta": {
+          "title": "StyleModelApplySimple"
+        }
+      },
+      "245": {
+        "inputs": {},
+        "class_type": "Reroute",
+        "_meta": {
+          "title": "Reroute"
+        }
+      },
+      "246": {
+        "inputs": {},
+        "class_type": "Reroute",
+        "_meta": {
+          "title": "Reroute"
+        }
+      },
+      "247": {
+        "inputs": {},
+        "class_type": "Reroute",
+        "_meta": {
+          "title": "Reroute"
+        }
+      },
+      "248": {
+        "inputs": {},
+        "class_type": "Reroute",
+        "_meta": {
+          "title": "Reroute"
+        }
+      },
+      "249": {
+        "inputs": {},
+        "class_type": "Reroute",
+        "_meta": {
+          "title": "Reroute"
+        }
+      },
+      "250": {
+        "inputs": {
+          "images": [
+            "123",
+            0
+          ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+          "title": "PreviewImage"
+        }
+      },
+      "253": {
+        "inputs": {
+          "text": "Curatin with rod",
+          "image": [
+            "35",
+            0
+          ]
+        },
+        "class_type": "SegmentV2",
+        "_meta": {
+          "title": "SegmentV2"
+        }
+      },
+      "254": {
+        "inputs": {
+          "text": "nearest",
+          "image": [
+            "253",
+            0
+          ],
+          "mask": [
+            "253",
+            1
+          ]
+        },
+        "class_type": "InpaintCropImproved",
+        "_meta": {
+          "title": "InpaintCropImproved"
+        }
+      },
+      "267": {
+        "inputs": {
+          "filename_prefix": "2K",
+          "images": [
+            "270",
+            0
+          ]
+        },
+        "class_type": "SaveImage",
+        "_meta": {
+          "title": "Save Image UPSCALED 2K"
+        }
+      },
+      "268": {
+        "inputs": {
+          "seed": 714483975798956,
+          "steps": 10,
+          "cfg": 1,
+          "sampler_name": "dpmpp_2m",
+          "scheduler": "karras",
+          "denoise": 0.6,
+          "model": [
+            "277",
+            0
+          ],
+          "positive": [
+            "290",
+            0
+          ],
+          "negative": [
+            "289",
+            0
+          ],
+          "latent_image": [
+            "271",
+            0
+          ]
+        },
+        "class_type": "KSampler",
+        "_meta": {
+          "title": "KSampler"
+        }
+      },
+      "269": {
+        "inputs": {},
+        "class_type": "Label (rgthree)",
+        "_meta": {
+          "title": "Denoise between 0.65-0.95"
+        }
+      },
+      "270": {
+        "inputs": {
+          "samples": [
+            "268",
+            0
+          ],
+          "vae": [
+            "284",
+            0
+          ]
+        },
+        "class_type": "VAEDecode",
+        "_meta": {
+          "title": "VAEDecode"
+        }
+      },
+      "271": {
+        "inputs": {
+          "pixels": [
+            "272",
+            0
+          ],
+          "vae": [
+            "284",
+            0
+          ]
+        },
+        "class_type": "VAEEncode",
+        "_meta": {
+          "title": "VAEEncode"
+        }
+      },
+      "272": {
+        "inputs": {
+          "text": "lanczos",
+          "image": [
+            "273",
+            0
+          ]
+        },
+        "class_type": "ImageScaleBy",
+        "_meta": {
+          "title": "ImageScaleBy"
+        }
+      },
+      "273": {
+        "inputs": {
+          "upscale_model": [
+            "276",
+            0
+          ],
+          "image": [
+            "274",
+            0
+          ]
+        },
+        "class_type": "ImageUpscaleWithModel",
+        "_meta": {
+          "title": "ImageUpscaleWithModel"
+        }
+      },
+      "274": {
+        "inputs": {
+          "anything": [
+            "281",
+            0
+          ]
+        },
+        "class_type": "easy cleanGpuUsed",
+        "_meta": {
+          "title": "easy cleanGpuUsed"
+        }
+      },
+      "275": {
+        "inputs": {
+          "anything": [
+            "270",
+            0
+          ]
+        },
+        "class_type": "easy cleanGpuUsed",
+        "_meta": {
+          "title": "easy cleanGpuUsed"
+        }
+      },
+      "276": {
+        "inputs": {
+          "model_name": "4x-UltraSharp.pth"
+        },
+        "class_type": "UpscaleModelLoader",
+        "_meta": {
+          "title": "UpscaleModelLoader"
+        }
+      },
+      "277": {
+        "inputs": {
+          "text": "Mixture of Diffusers",
+          "model": [
+            "291",
+            0
+          ]
+        },
+        "class_type": "TiledDiffusion",
+        "_meta": {
+          "title": "TiledDiffusion"
+        }
+      },
+      "279": {
+        "inputs": {
+          "text": "bicubic",
+          "image": [
+            "13",
+            0
+          ],
+          "mask": [
+            "14",
+            0
+          ],
+          "preresize_min_height": [
+            "91",
+            0
+          ],
+          "preresize_max_height": [
+            "91",
+            0
+          ]
+        },
+        "class_type": "InpaintCropImproved",
+        "_meta": {
+          "title": "InpaintCropImproved"
+        }
+      },
+      "281": {
+        "inputs": {
+          "stitcher": [
+            "248",
+            0
+          ],
+          "inpainted_image": [
+            "123",
+            0
+          ]
+        },
+        "class_type": "InpaintStitchImproved",
+        "_meta": {
+          "title": "InpaintStitchImproved"
+        }
+      },
+      "282": {
+        "inputs": {
+          "filename": "flux.1-fill-dev-OneReward-transformer_fp8.safetensors"
+        },
+        "class_type": "UNETLoader",
+        "_meta": {
+          "title": "UNETLoader"
+        }
+      },
+      "284": {
+        "inputs": {},
+        "class_type": "Reroute",
+        "_meta": {
+          "title": "Reroute"
+        }
+      },
+      "287": {
+        "inputs": {},
+        "class_type": "Reroute",
+        "_meta": {
+          "title": "Reroute"
+        }
+      },
+      "288": {
+        "inputs": {},
+        "class_type": "Reroute",
+        "_meta": {
+          "title": "Reroute"
+        }
+      },
+      "289": {
+        "inputs": {
+          "conditioning": [
+            "290",
+            0
+          ]
+        },
+        "class_type": "ConditioningZeroOut",
+        "_meta": {
+          "title": "ConditioningZeroOut"
+        }
+      },
+      "290": {
+        "inputs": {},
+        "class_type": "Reroute",
+        "_meta": {
+          "title": "Reroute"
+        }
+      },
+      "291": {
+        "inputs": {},
+        "class_type": "Reroute",
+        "_meta": {
+          "title": "Reroute"
+        }
+      },
+      "292": {
+        "inputs": {
+          "filename": "flux1-dev-fp8-e4m3fn.safetensors"
+        },
+        "class_type": "UNETLoader",
+        "_meta": {
+          "title": "UNETLoader"
+        }
+      },
+      "301": {
+        "inputs": {
+          "images": [
+            "305",
+            0
+          ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+          "title": "PreviewImage"
+        }
+      },
+      "302": {
+        "inputs": {
+          "filename_prefix": "ComfyUI",
+          "images": [
+            "120",
+            0
+          ]
+        },
+        "class_type": "SaveImage",
+        "_meta": {
+          "title": "Save final result Image (output)"
+        }
+      },
+      "303": {
+        "inputs": {
+          "image": "curtain_mask.png"
+        },
+        "class_type": "LoadImage",
+        "_meta": {
+          "title": "Load curtain mask (input)"
+        }
+      },
+      "304": {
+        "inputs": {
+          "text": "red",
+          "image": [
+            "303",
+            0
+          ]
+        },
+        "class_type": "ImageToMask",
+        "_meta": {
+          "title": "ImageToMask"
+        }
+      },
+      "305": {
+        "inputs": {
+          "anything": [
+            "325",
+            0
+          ]
+        },
+        "class_type": "easy cleanGpuUsed",
+        "_meta": {
+          "title": "easy cleanGpuUsed"
+        }
+      },
+      "306": {
+        "inputs": {
+          "anything": [
+            "254",
+            1
+          ]
+        },
+        "class_type": "easy cleanGpuUsed",
+        "_meta": {
+          "title": "easy cleanGpuUsed"
+        }
+      },
+      "310": {
+        "inputs": {
+          "value": [
+            {
+              "name": "A",
+              "selected": true,
+              "url": "/api/view?filename=rgthree.compare._temp_kdfvh_00001_.png&type=temp&subfolder=&rand=0.5185157240516576"
+            },
+            {
+              "name": "B",
+              "selected": true,
+              "url": "/api/view?filename=rgthree.compare._temp_kdfvh_00002_.png&type=temp&subfolder=&rand=0.03293160522427718"
+            }
+          ],
+          "image_a": [
+            "120",
+            0
+          ],
+          "image_b": [
+            "281",
+            0
+          ]
+        },
+        "class_type": "Image Comparer (rgthree)",
+        "_meta": {
+          "title": "Image Comparer (rgthree)"
+        }
+      },
+      "322": {
+        "inputs": {
+          "image": "processed_IMG20250919150037.jpg"
+        },
+        "class_type": "LoadImage",
+        "_meta": {
+          "title": "Load Fabric Swatch (input)"
+        }
+      },
+      "323": {
+        "inputs": {
+          "text": "clahe",
+          "image": [
+            "322",
+            0
+          ]
+        },
+        "class_type": "BlackBackgroundScanner",
+        "_meta": {
+          "title": "BlackBackgroundScanner"
+        }
+      },
+      "324": {
+        "inputs": {
+          "images": [
+            "326",
+            0
+          ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+          "title": "PreviewImage"
+        }
+      },
+      "325": {
+        "inputs": {
+          "filename": "file.blend",
+          "diffuse_texture": [
+            "326",
+            0
+          ],
+          "width_ratio": [
+            "326",
+            4
+          ],
+          "height_ratio": [
+            "326",
+            5
+          ]
+        },
+        "class_type": "BlenderRenderNode",
+        "_meta": {
+          "title": "BlenderRenderNode"
+        }
+      },
+      "326": {
+        "inputs": {
+          "image": [
+            "323",
+            0
+          ]
+        },
+        "class_type": "SeamlessPatternNode",
+        "_meta": {
+          "title": "SeamlessPatternNode"
+        }
+      }
+    }
+  }
+}

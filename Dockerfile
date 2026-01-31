@@ -34,4 +34,7 @@ RUN comfy model download --url https://huggingface.co/Comfy-Org/stable-diffusion
 RUN comfy model download --url https://huggingface.co/google/siglip2-so400m-patch16-512/resolve/main/model.safetensors --relative-path models/clip_vision --filename siglip2-so400m-patch16-512.safetensors
 
 # copy all input data (like images or videos) into comfyui (uncomment and adjust if needed)
-# COPY input/ /comfyui/input/
+COPY assets/ /comfyui/assets/
+COPY scene_destination.png /comfyui/input/
+COPY curtain_mask.png /comfyui/input/
+COPY processed_IMG20250919150037.jpg /comfyui/input/

@@ -78,8 +78,8 @@ RUN wget -O /comfyui/models/diffusion_models/flux1-dev-fp8-e4m3fn.safetensors ht
 # =======================================================
 # 6. DOWNLOAD BLEND FILE & IMAGES
 # =======================================================
-RUN wget -O /comfyui/input/file.blend https://huggingface.co/Srivarshan7/my-assets/resolve/b61a31e/file.blend
+RUN wget -O /comfyui/input/file.blend https://huggingface.co/Nithis003/File.blend/resolve/main/file.blend
 
 COPY scene_destination.png /comfyui/input/
 COPY curtain_mask.png /comfyui/input/
-COPY processed_IMG20250919150037.jpg /comfyui/input/
+COPY processed_IMG20250919150037.jpg /comfyui/input/h
